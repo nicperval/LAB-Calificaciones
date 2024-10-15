@@ -13,24 +13,22 @@ Se quiere ayudar a los alumnos de Fundamentos de Programación a calcular su not
 Escribe una función en el módulo 'calificaciones'  llamada `nota_teoria` que, dadas las notas de los dos exámenes teóricos de un cuatrimestre, permita calcular la nota que un alumno tiene en el bloque teórico de ese cuatrimestre. La nota se calcula como la media de las notas de ambos cuatrimestres. Una nota con valor None indica que el alumno no se ha presentado al examen, y se considerará como un cero.
 
 _Pruebas_:
-Pruebe la función en el módulo `calificaciones_test.py` con los siguientes valores, siendo los dos números que están antes de la flecha las notas del primer y segundo exámen teórico, respectivamente, y el valor situado a la derecha de la flecha la nota obtenida.
+Pruebe la función en el módulo `calificaciones_test` con los siguientes valores, siendo los dos números que están antes de la flecha las notas del primer y segundo exámen teórico, respectivamente, y el valor situado a la derecha de la flecha la nota obtenida.
 ```
 9.1, 7.2 ==> 8.15
 4.0, 6.0 ==> 5.0
 4.0, 3.0 ==> 3.5
 None, 3.0 ==>1.5
 9.0, None ==> 4.5
-None, None ==> 0.0
 ```
 
 #### Apartado b
 
 Escribe una función en el módulo 'calificaciones' llamada `nota_cuatrimestre` que, dadas una tupla con dos elementos (las notas de los exámenes teóricos de un cuatrimestre), y la nota del exámen práctico,
-devuelva la nota obtenida en ese cuatrimestre. La nota del cuatrimestre, siempre que la media de los dos cuestionarios teóricos (llamémosla NT) sea superior o igual a 4, se calcula como 0,2* (NT) + 0,8 * P, siendo P la nota del examen práctico. Si la media no es superior a 4, la nota del cuatrimestre es 0. Un valor None en una nota indica que el alumno no se ha presentado al examen, y se considerará como un cero.
-
+devuelva la nota obtenida en ese cuatrimestre. La nota del cuatrimestre,  siempre que la media de los dos cuestionarios teóricos sea superior o igual a 4, se calcula como 0,1* (T1+T2) + 0,8 * P, siendo  T1 y T2 las notas de los dos exámenes teóricos y P la nota del examen práctico. Si la media no es superior a 4, la nota del cuatrimestre es 0. Un valor None en una nota indica que el alumno no se ha presentado al examen, y se considerará como un cero.
 
 _Pruebas_:
-Pruebe la función en el módulo `calificaciones_test.py` con los siguientes valores, siendo los números situados a la izquierda de la flecha las notas del primer examen teórico, del segundo y del examen práctico, respectivamente. La nota obtenida es el número situado a la derecha de la flecha.
+Pruebe la función en el módulo `calificaciones_test` con los siguientes valores, siendo los números situados a la izquierda de la flecha las notas del primer examen teórico, del segundo y del examen práctico, respectivamente. La nota obtenida es el número situado a la derecha de la flecha.
 ```
 9.1, 7.2, 8.1 ==> 8.110000000000001
 4.0, 6.0, 5.0 ==> 5.0
@@ -45,7 +43,7 @@ dos exámenes prácticos, devuelva la nota obtenida por evaluación continua. La
 siempre que la nota de ambos cuatrimestres sea superior a 4. Si en alguno de los dos cuatrimestres la nota es inferior a 4, entonces la nota es el mínimo entre 4 y la nota media de los cuatrimestres. El valor None en una nota indica que el alumno no se ha presentado al examen, y se considerará como cero.
 
 _Pruebas_:
-Pruebe la función en el módulo `calificaciones_test.py` con los siguientes valores, siendo los números situados a la izquierda de la flecha las notas del primer examen teórico, del segundo y del examen práctico, respectivamente. La nota obtenida es el número situado a la derecha de la flecha.
+Pruebe la función en el módulo `calificaciones_test` con los siguientes valores, siendo los números situados a la izquierda de la flecha las notas del primer examen teórico, del segundo y del examen práctico, respectivamente. La nota obtenida es el número situado a la derecha de la flecha.
 ```
     notas teoría:  9.6, 9.9,10.0, 9.8 notas_práctico: 9.7,9.5 ==> 9.645
     notas teoría: 4.4, 4.9, 5.1, 4.7 notas_práctico: 4.6,4.8 ==> 4.715
@@ -81,4 +79,3 @@ Tus notas del segundo cuatrimestre son:
  teoria 5.8, práctica 5.0, cuatrimestre 5.16
 Tu nota final de la asignatura es 5.735
 ```
-
